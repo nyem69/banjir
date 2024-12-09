@@ -3,13 +3,14 @@
   import { t } from '$lib/i18n';
   import mapboxgl from 'mapbox-gl';
   import 'mapbox-gl/dist/mapbox-gl.css';
+  import { PUBLIC_MAPBOX_TOKEN } from '$env/static/public';
 
   let map: mapboxgl.Map;
   let data: any[] = [];
   let loading = true;
 
   // Mapbox access token
-  mapboxgl.accessToken = 'pk.eyJ1IjoibnllbSIsImEiOiJBZGdTcWYwIn0.Qodnwy5WNQVNB4Khe0Au-g';
+  mapboxgl.accessToken = PUBLIC_MAPBOX_TOKEN;
 
   async function fetchData() {
     try {
