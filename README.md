@@ -1,38 +1,111 @@
-# sv
+# Malaysia Flood Evacuation Centers Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A real-time dashboard showing information about flood evacuation centers in Malaysia. The dashboard fetches data from the official JKM (Jabatan Kebajikan Masyarakat) API and visualizes it using D3.js and Mapbox GL JS.
 
-## Creating a project
+## 🌐 Live Demo
 
-If you're seeing this, you've probably already done this step. Congrats!
+Visit the live dashboard at: [https://nyem69.github.io/banjir/](https://nyem69.github.io/banjir/)
 
-```bash
-# create a new project in the current directory
-npx sv create
+## 📊 Features
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Real-time data from JKM API
+- Interactive visualizations:
+  - Summary statistics cards
+  - District-wise bar chart using D3.js
+  - Interactive map using Mapbox GL JS
+  - Detailed data table
+- Responsive design for mobile and desktop
+- Multi-language support (English, Malay, Tamil, Chinese)
+- Authentication system
 
-## Developing
+## 🛠️ Technology Stack
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- [SvelteKit](https://kit.svelte.dev/) - Full-stack web framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [D3.js](https://d3js.org/) - Data visualization library
+- [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js) - Interactive mapping
+- [Drizzle ORM](https://orm.drizzle.team/) - TypeScript ORM
+- [Paraglide](https://inlang.com/m/gerre34r/library-inlang-paraglideJs) - Internationalization
+- [Lucia](https://lucia-auth.com/) - Authentication
+- [MySQL](https://www.mysql.com/) - Database
+- [Svelte-ux](https://www.svelte-ux.com/) - UI component library
+- [Layerchart](https://layerchart.com/) - Charting library for Svelte
 
-```bash
-npm run dev
+## 🚀 Getting Started
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Prerequisites
 
-## Building
+- Node.js 18 or later
+- pnpm (recommended) or npm
+- MySQL database
 
-To create a production version of your app:
+### Installation
 
-```bash
-npm run build
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nyem69/banjir.git
+   cd banjir
+   ```
 
-You can preview the production build with `npm run preview`.
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   ```
+   Edit `.env` and add your database credentials and Mapbox access token.
+
+4. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+5. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## 📱 Building for Production
+
+1. Build the application:
+   ```bash
+   pnpm build
+   ```
+
+2. Preview the production build:
+   ```bash
+   pnpm preview
+   ```
+
+## 📝 API Information
+
+The dashboard uses the following JKM API endpoints:
+
+- Centers List: `https://infobencanajkmv2.jkm.gov.my/api/data-dashboard-table-pps.php`
+- Active Centers: `https://infobencanajkmv2.jkm.gov.my/api/pusat-buka.php`
+- District Boundaries:
+  - Peninsula: `https://infobencanajkmv2.jkm.gov.my/assets/data/malaysia/arcgis_district_semenanjung.geojson`
+  - Borneo: `https://infobencanajkmv2.jkm.gov.my/assets/data/malaysia/arcgis_district_borneo.geojson`
+
+## 🌍 Internationalization
+
+The dashboard supports multiple languages:
+- English (en)
+- Malay (ms)
+- Tamil (ta)
+- Chinese (zh)
+
+Language files are located in the `messages/` directory.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Data provided by [Jabatan Kebajikan Masyarakat Malaysia](https://www.jkm.gov.my/)
+- Built with [SvelteKit](https://kit.svelte.dev/)

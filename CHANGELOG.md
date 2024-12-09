@@ -22,6 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Paraglide for internationalization
 - Integrated Lucia for authentication
 - Set up MySQL database connection
+- Added Svelte-ux for UI components
+- Integrated Layerchart for data visualization
 
 ### Changed
 - Restructured project to follow SvelteKit conventions
