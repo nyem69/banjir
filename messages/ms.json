@@ -1,4 +1,5 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Selamat datang, {name} dari ms!"
+	"hello_world": "Selamat datang, {name} dari ms!",
+	"title": "Malaysia Flood Evacuation Centers Dashboard"
 }
