@@ -9,12 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Planned
 - Geographic visualization with MapboxGL
 - Advanced filtering capabilities
-- Multi-language support
 - Offline mode support
 - Historical data analysis
 - Mobile app wrapper
 
 ### Added
+- Created new dashboard components (search.svelte, user-nav.svelte, main-nav.svelte)
+- Added multi-language support for search functionality (en, ms, zh, ta)
+- Implemented new layout structure with responsive header
+- Added language switcher buttons in the header
 - Implemented comprehensive sidebar navigation with menu items
 - Added dropdown menu for user actions in sidebar footer
 - Integrated `shadcn-svelte` UI components

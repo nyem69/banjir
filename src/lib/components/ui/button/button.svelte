@@ -57,10 +57,8 @@
 {#if href}
 	<a
 		bind:this={ref}
-		href={href}
 		class={cn(buttonVariants({ variant, size, className }))}
-		rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-		aria-label={!children ? 'Link' : undefined}
+		{href}
 		{...restProps}
 	>
 		{@render children?.()}
@@ -70,7 +68,6 @@
 		bind:this={ref}
 		class={cn(buttonVariants({ variant, size, className }))}
 		{type}
-		aria-label={!children ? 'Button' : undefined}
 		{...restProps}
 	>
 		{@render children?.()}

@@ -1,5 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "你好, {name}!",
-	"title": "马来西亚洪水避难所仪表板"
+	"title": "马来西亚洪水避难所仪表板",
+	"search": "搜索"
 }

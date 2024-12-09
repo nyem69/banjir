@@ -1,5 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "வணக்கம், {name} தமிழ் உலகம்!",
-	"title": "மலேசியா பூச்சியில் பூச்சியா பூச்சியா பூச்சியா"
+	"title": "மலேசியா பூச்சியில் பூச்சியா பூச்சியா பூச்சியா",
+	"search": "தேடு"
 }
