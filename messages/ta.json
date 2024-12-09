@@ -1,4 +1,21 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from ta!"
+	"hello_world": "வணக்கம், {name} இலிருந்து ta!",
+	"apptitle": "மலேசிய வெள்ள மீட்பு மையங்கள் டாஷ்போர்டு",
+	"appfooter": "மலேசிய வெள்ள மீட்பு மையங்கள்",
+	"apploading": "தரவு ஏற்றப்படுகிறது...",
+	"appdashboard": "டாஷ்போர்டு",
+	"appmap": "வரைபடம்",
+	"stats": {
+		"centers": "மீட்பு மையங்கள்",
+		"evacuees": "மொத்த பாதிக்கப்பட்டவர்கள்",
+		"districts": "செயலில் உள்ள மாவட்டங்கள்"
+	},
+	"table": {
+		"center": "மைய பெயர்",
+		"district": "மாவட்டம்",
+		"state": "மாநிலம்",
+		"evacuees": "பாதிக்கப்பட்டவர்கள்",
+		"families": "குடும்பங்கள்"
+	}
 }

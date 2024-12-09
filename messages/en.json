@@ -1,11 +1,12 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "Hello, {name} from en!",
-	"app": {
-    "title": "Malaysia Flood Evacuation Centers Dashboard",
-    "footer": "Malaysia Flood Evacuation Centers",
-    "loading": "Loading data..."
-  },
+  "apptitle": "Malaysia Flood Evacuation Centers Dashboard",
+  "appfooter": "Malaysia Flood Evacuation Centers",
+  "apploading": "Loading data...",
+  "appdashboard": "Dashboard",
+  "appmap": "Map",
+
   "stats": {
     "centers": "Evacuation Centers",
     "evacuees": "Total Evacuees",

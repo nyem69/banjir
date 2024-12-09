@@ -40,6 +40,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@inlang/paraglide-js-adapter-vite": "^1.2.40",
 		"@inlang/paraglide-sveltekit": "^0.11.1",
 		"@node-rs/argon2": "^1.1.0",
 		"@oslojs/crypto": "^1.0.1",
