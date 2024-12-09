@@ -14,6 +14,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Historical data analysis
 - Mobile app wrapper
 
+## [0.3.0] - 2024-12-09
+### Added
+- Interactive map visualization (map.html)
+  - District boundaries for Peninsular and Borneo Malaysia
+  - Evacuation center locations with interactive popups
+  - Center statistics overlay
+  - Visual legend
+- MapboxGL integration for geographical visualization
+
+### Changed
+- Updated Mapbox access token
+- Enhanced data visualization capabilities
+
 ## [0.2.0] - 2024-12-09
 ### Added
 - Detailed project documentation
@@ -65,6 +78,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages hosting
 - Basic API integration
 
-[Unreleased]: https://github.com/nyem69/banjir/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/nyem69/banjir/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/nyem69/banjir/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/nyem69/banjir/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/nyem69/banjir/releases/tag/v0.1.0

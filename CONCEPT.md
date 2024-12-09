@@ -79,11 +79,17 @@ graph LR
    - Sortable columns
    - Search functionality
 
+4. **Geographic Map**
+   - Center locations with interactive popups
+   - District boundaries for Peninsula and Borneo
+   - Visual indicators for center capacity
+   - Statistics overlay
+
 ### Future Enhancements
-1. **Geographic Map**
-   - Center locations
+1. **Advanced Geographic Features**
    - Heat maps of affected areas
-   - District boundaries
+   - Terrain analysis
+   - Flood zone overlays
 
 2. **Time Series Visualization**
    - Evacuation trends

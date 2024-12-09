@@ -9,10 +9,11 @@
 - [x] GitHub Pages deployment
 
 ### Phase 2: Enhanced Features (Week 3-4)
-- [ ] Geographic Integration
-  - [ ] MapboxGL integration
-  - [ ] Center location plotting
-  - [ ] District boundary visualization
+- [x] Geographic Integration
+  - [x] MapboxGL integration
+  - [x] Center location plotting
+  - [x] District boundary visualization
+  - [x] Interactive popups
   - [ ] Heat map implementation
 
 - [ ] Advanced Filtering
@@ -57,14 +58,14 @@
 
 ### 1. Frontend Framework Migration
 ```javascript
-// Current: Vanilla JavaScript + D3.js
-// Target: Svelte + D3.js
+// Current: Vanilla JavaScript + D3.js + MapboxGL
+// Target: Svelte + D3.js + MapboxGL
 
 // Component Structure
 src/
   components/
     Map/
-      MapView.svelte
+      MapView.svelte      // Implemented as map.html
       Controls.svelte
     Charts/
       BarChart.svelte
@@ -366,7 +367,7 @@ jobs:
 - [x] Initial deployment
 
 ### Week 3-4
-- [ ] Geographic features
+- [x] Geographic features
 - [ ] Advanced filtering
 - [ ] Mobile optimization
 
