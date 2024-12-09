@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your site description">
+    <title>Your GitHub Pages Site</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --accent-color: #dbeafe;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        nav {
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            min-height: calc(100vh - 300px);
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background-color: var(--accent-color);
+            padding: 3rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            background-color: var(--accent-color);
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Site Title</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to Your GitHub Pages Site</h2>
+            <p>This is a modern, responsive template for your GitHub Pages website. Customize it to match your needs!</p>
+            <a href="#learn-more" class="button">Learn More</a>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Add your content here. This template includes:</p>
+            <ul>
+                <li>Responsive design</li>
+                <li>Clean and modern layout</li>
+                <li>CSS variables for easy customization</li>
+                <li>Mobile-friendly navigation</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
