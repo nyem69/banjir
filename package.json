@@ -26,14 +26,24 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-sveltekit": "^0.11.1",
+		"@layerstack/utils": "^0.0.7",
 		"@node-rs/argon2": "^1.1.0",
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
+		"d3-array": "^3.2.4",
+		"d3-geo": "^3.1.1",
+		"d3-interpolate": "^3.0.1",
+		"d3-random": "^3.0.1",
+		"d3-scale": "^4.0.2",
+		"d3-scale-chromatic": "^3.1.0",
+		"date-fns": "^4.1.0",
 		"drizzle-orm": "^0.33.0",
+		"layerchart": "^0.59.6",
 		"mysql2": "^3.11.0",
-		"svelte-ux": "^0.76.0"
+		"svelte-ux": "^0.76.0",
+		"topojson-client": "^3.1.0"
 	}
 }
