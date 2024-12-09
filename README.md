@@ -1,79 +1,38 @@
-# Malaysia Flood Evacuation Centers Dashboard
+# sv
 
-A real-time dashboard showing information about flood evacuation centers in Malaysia. The dashboard fetches data from the official JKM (Jabatan Kebajikan Masyarakat) API and visualizes it using D3.js.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## 🌐 Live Demo
+## Creating a project
 
-Visit the live dashboard at: [https://nyem69.github.io/banjir/](https://nyem69.github.io/banjir/)
+If you're seeing this, you've probably already done this step. Congrats!
 
-## 📊 Features
+```bash
+# create a new project in the current directory
+npx sv create
 
-- Real-time data from JKM API
-- Interactive bar chart showing evacuees by district
-- Summary statistics including:
-  - Total number of evacuation centers
-  - Total number of evacuees
-  - Number of active districts
-- Detailed table view of all evacuation centers
-- Responsive design for mobile and desktop
-
-## 🛠️ Technology Stack
-
-- HTML5
-- CSS3
-- JavaScript
-- D3.js for data visualization
-- GitHub Pages for hosting
-
-## 🚀 Local Development
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/nyem69/banjir.git
-   cd banjir
-   ```
-
-2. Open the project in your preferred code editor
-
-3. Serve the files using a local server. For example, using Python:
-   ```bash
-   python -m http.server
-   ```
-   Or using Node.js's `http-server`:
-   ```bash
-   npx http-server
-   ```
-
-4. Open your browser and navigate to `http://localhost:8000`
-
-## 📝 API Information
-
-The dashboard uses the JKM API endpoint:
-```
-https://infobencanajkmv2.jkm.gov.my/api/data-dashboard-table-pps.php
+# create a new project in my-app
+npx sv create my-app
 ```
 
-Parameters:
-- `seasonmain_id`: Identifies the flood season
-- `seasonnegeri_id`: Identifies the state
+## Developing
 
-## 📱 Browser Compatibility
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-The dashboard is tested and works on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+```bash
+npm run dev
 
-## 🤝 Contributing
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Building
 
-## 📄 License
+To create a production version of your app:
 
-This project is open source and available under the [MIT License](LICENSE).
+```bash
+npm run build
+```
 
-## 🙏 Acknowledgments
+You can preview the production build with `npm run preview`.
 
-- Data provided by [Jabatan Kebajikan Masyarakat Malaysia](https://www.jkm.gov.my/)
-- Built with [D3.js](https://d3js.org/)
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
