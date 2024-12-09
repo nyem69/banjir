@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Flood Evacuation Centers Map</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .map-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+        }
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+        .legend-item {
+            margin: 5px 0;
+        }
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="map-overlay">
+        <h2>Flood Evacuation Centers</h2>
+        <div id="center-count"></div>
+    </div>
+    <div class="legend">
+        <h3>Legend</h3>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #ff4444;"></span>
+            Evacuation Center
+        </div>
+        <div class="legend-item">
+            <span class="legend-color" style="background: #1f77b4; opacity: 0.2;"></span>
+            District Boundary
+        </div>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibnllbTY5IiwiYSI6ImNscG1wcWV2NzFkN2Uya3M0bWxweXhkeXIifQ.soOtHtxHqsM4Qv10wUDJpg';
+        
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v11',
+            center: [109.6975, 3.7880], // Center of Malaysia
+            zoom: 5
+        });
+
+        async function loadGeoJSON(url) {
+            try {
+                const corsProxy = 'https://corsproxy.io/?';
+                const response = await fetch(corsProxy + encodeURIComponent(url));
+                return await response.json();
+            } catch (error) {
+                console.error('Error loading GeoJSON:', error);
+                return null;
+            }
+        }
+
+        async function loadCenters() {
+            try {
+                const corsProxy = 'https://corsproxy.io/?';
+                const url = 'https://infobencanajkmv2.jkm.gov.my/api/pusat-buka.php?a=0&b=0';
+                const response = await fetch(corsProxy + encodeURIComponent(url));
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error loading centers:', error);
+                return [];
+            }
+        }
+
+        map.on('load', async () => {
+            // Load GeoJSON data
+            const peninsulaData = await loadGeoJSON('https://infobencanajkmv2.jkm.gov.my/assets/data/malaysia/arcgis_district_semenanjung.geojson');
+            const borneoData = await loadGeoJSON('https://infobencanajkmv2.jkm.gov.my/assets/data/malaysia/arcgis_district_borneo.geojson');
+            const centers = await loadCenters();
+
+            if (peninsulaData) {
+                map.addSource('peninsula', {
+                    type: 'geojson',
+                    data: peninsulaData
+                });
+
+                map.addLayer({
+                    id: 'peninsula-fill',
+                    type: 'fill',
+                    source: 'peninsula',
+                    paint: {
+                        'fill-color': '#1f77b4',
+                        'fill-opacity': 0.2
+                    }
+                });
+
+                map.addLayer({
+                    id: 'peninsula-border',
+                    type: 'line',
+                    source: 'peninsula',
+                    paint: {
+                        'line-color': '#1f77b4',
+                        'line-width': 1
+                    }
+                });
+            }
+
+            if (borneoData) {
+                map.addSource('borneo', {
+                    type: 'geojson',
+                    data: borneoData
+                });
+
+                map.addLayer({
+                    id: 'borneo-fill',
+                    type: 'fill',
+                    source: 'borneo',
+                    paint: {
+                        'fill-color': '#1f77b4',
+                        'fill-opacity': 0.2
+                    }
+                });
+
+                map.addLayer({
+                    id: 'borneo-border',
+                    type: 'line',
+                    source: 'borneo',
+                    paint: {
+                        'line-color': '#1f77b4',
+                        'line-width': 1
+                    }
+                });
+            }
+
+            // Add evacuation centers
+            if (centers && centers.length > 0) {
+                const geojsonPoints = {
+                    type: 'FeatureCollection',
+                    features: centers.map(center => ({
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [
+                                parseFloat(center.longitude) || 0,
+                                parseFloat(center.latitude) || 0
+                            ]
+                        },
+                        properties: {
+                            name: center.nama_pps,
+                            district: center.daerah,
+                            state: center.negeri,
+                            evacuees: center.jumlah_mangsa || 0,
+                            families: center.jumlah_keluarga || 0
+                        }
+                    }))
+                };
+
+                map.addSource('centers', {
+                    type: 'geojson',
+                    data: geojsonPoints
+                });
+
+                map.addLayer({
+                    id: 'centers',
+                    type: 'circle',
+                    source: 'centers',
+                    paint: {
+                        'circle-radius': [
+                            'interpolate',
+                            ['linear'],
+                            ['get', 'evacuees'],
+                            0, 6,
+                            100, 12,
+                            1000, 20
+                        ],
+                        'circle-color': '#ff4444',
+                        'circle-opacity': 0.8,
+                        'circle-stroke-width': 1,
+                        'circle-stroke-color': '#fff'
+                    }
+                });
+
+                // Update center count
+                document.getElementById('center-count').textContent = 
+                    `Active Centers: ${centers.length}
+                    Total Evacuees: ${centers.reduce((sum, center) => sum + parseInt(center.jumlah_mangsa || 0), 0)}`;
+
+                // Add popup
+                map.on('click', 'centers', (e) => {
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const properties = e.features[0].properties;
+
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(`
+                            <h3>${properties.name}</h3>
+                            <p>District: ${properties.district}</p>
+                            <p>State: ${properties.state}</p>
+                            <p>Evacuees: ${properties.evacuees}</p>
+                            <p>Families: ${properties.families}</p>
+                        `)
+                        .addTo(map);
+                });
+
+                // Change cursor on hover
+                map.on('mouseenter', 'centers', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', 'centers', () => {
+                    map.getCanvas().style.cursor = '';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
