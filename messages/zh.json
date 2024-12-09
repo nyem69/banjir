@@ -1,21 +1,4 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "你好，来自 zh 的 {name}！",
-	"apptitle": "马来西亚水灾疏散中心仪表板",
-	"appfooter": "马来西亚水灾疏散中心",
-	"apploading": "正在加载数据...",
-	"appdashboard": "仪表板",
-	"appmap": "地图",
-	"stats": {
-		"centers": "疏散中心",
-		"evacuees": "疏散人数",
-		"districts": "活跃地区"
-	},
-	"table": {
-		"center": "中心名称",
-		"district": "地区",
-		"state": "州属",
-		"evacuees": "疏散人数",
-		"families": "家庭数量"
-	}
+	"hello_world": "你好, {name}!"
 }

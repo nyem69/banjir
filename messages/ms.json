@@ -1,22 +1,4 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hai, {name} dari ms!",
-	"apptitle": "Dashboard Pusat Pemindahan Banjir Malaysia",
-	"appfooter": "Pusat Pemindahan Banjir Malaysia",
-	"apploading": "Sedang memuat data...",
-	"appdashboard": "Dashboard",
-	"appmap": "Peta",	
-	"stats": {
-		"centers": "Pusat Pemindahan",
-		"evacuees": "Jumlah Mangsa",
-		"districts": "Daerah Aktif"
-	},
-	"table": {
-		"center": "Nama Pusat",
-		"district": "Daerah",
-		"state": "Negeri",
-		"evacuees": "Mangsa",
-		"families": "Keluarga"
-	}
-
+	"hello_world": "Selamat datang, {name} dari ms!"
 }
