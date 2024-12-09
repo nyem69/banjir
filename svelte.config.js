@@ -14,6 +14,7 @@ const config = {
 		adapter: adapter(),
 
 		alias: {
+			"@/*": "./src/lib/*",
 			$lib: './src/lib',
 			$layerchart: './node_modules/layerchart/dist'
 		}		
