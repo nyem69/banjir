@@ -80,20 +80,22 @@
 
 
 	<Sidebar.Provider bind:open={$sidebarOpen}>
-		<AppSidebar />
-		<main class="w-full"style="width: calc(100% - 24px);">		
-			<div class="flex border-b items-center flex-wrap">
-				<div class="flex-1 mt-2 ml-2" style="order:{isMobile ? 1 : 1}">
+		<!-- <AppSidebar /> -->
+		<!-- <main class="w-full"style="width: calc(100% - 24px);">		 -->
+		<main class="w-full" style="width: calc(100% - 24px);">		
+				<div class="flex border-b items-center flex-wrap justify-center">
+				<!-- <div class="flex-1 mt-2 ml-2" style="order:{isMobile ? 1 : 1}">
 					<Sidebar.Trigger />
-				</div>
-				<div class="flex-1" style="order:{isMobile ? 3 : 2}">
+				</div> -->
+				<!-- <div class="flex-1" style="order:{isMobile ? 3 : 2}">
 					<MainNav class="mx-6" />
 				</div>  
 				<div class="flex-1" style="order:{isMobile ? 4 : 3}">
 					<Search />
-				</div>  
-				<div class="flex-2" style="order:{isMobile ? 2 : 4}">
-					<div class="flex h-16 items-center px-4 gap-1">
+				</div>   -->
+				<!-- <div class="flex-2" style="order:{isMobile ? 2 : 4}"> -->
+				<div class="flex-1" style="order:1">
+					<div class="flex h-16 items-center px-4 gap-1 justify-end">
 						<Button variant={languageTag()=='ms'?'secondary':'primary'} size="sm" onclick={() => switchToLanguage('ms')}>bm</Button>
 						<Button variant={languageTag()=='en'?'secondary':'primary'} size="sm" onclick={() => switchToLanguage('en')}>en</Button>
 						<Button variant={languageTag()=='zh'?'secondary':'primary'} size="sm" onclick={() => switchToLanguage('zh')}>中文</Button>
@@ -105,7 +107,6 @@
 							  ☀️
 							{/if}
 						</Button>						
-
 					</div>
 				</div>
 			</div>			
