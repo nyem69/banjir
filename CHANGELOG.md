@@ -22,11 +22,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added dropdown menu for user actions in sidebar footer
 - Integrated `shadcn-svelte` UI components
 - Integrated `lucide-svelte` icons library
+- Enhanced SEO component with full multi-language support (en, ms, zh, ta)
 
 ### Changed
 - Reordered plugins in `vite.config.ts` to ensure correct initialization
 - Enhanced `app-sidebar.svelte` with more structured and interactive components
 - Improved accessibility in button components by adding missing attributes
+- Updated SEO metadata to support all four languages with proper localization
+- Improved SEO schema to include all supported languages
 
 ### Fixed
 - Resolved a11y linting warnings in button components
