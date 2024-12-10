@@ -35,6 +35,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Resolved a11y linting warnings in button components
 - Updated deprecated accessibility rule names
 
+## [0.5.0] - 2024-12-11
+### Added
+- Comprehensive project documentation
+  - API documentation with endpoints and data structures
+  - Data visualization guide with D3.js examples
+  - Testing guide with unit, integration, and E2E testing setup
+  - Updated i18n documentation with best practices
+  - Development rules and guidelines
+- Enhanced error handling and validation
+- Expanded test coverage infrastructure
+
+### Changed
+- Updated project roadmap with new phases
+- Enhanced documentation structure
+- Improved code organization
+
+### Documentation
+- Added detailed API endpoints documentation
+- Added WebSocket integration guide
+- Added data visualization best practices
+- Added testing infrastructure setup guide
+- Added deployment and maintenance planning
+
 ## [0.4.0] - 2024-12-09
 ### Added
 - Migrated to SvelteKit framework
@@ -115,7 +138,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages hosting
 - Basic API integration
 
-[Unreleased]: https://github.com/nyem69/banjir/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/nyem69/banjir/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/nyem69/banjir/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/nyem69/banjir/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/nyem69/banjir/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/nyem69/banjir/compare/v0.1.0...v0.2.0
