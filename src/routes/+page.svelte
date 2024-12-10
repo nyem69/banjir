@@ -664,9 +664,9 @@
       <p class="text-sm text-muted-foreground mb-2">
         {#if dateSeriesData?.length > 1}
           {#if dateSeriesData[dateSeriesData.length - 1].negeri > dateSeriesData[dateSeriesData.length - 2].negeri}
-            {m.increased()} {dateSeriesData[dateSeriesData.length - 1].negeri - dateSeriesData[dateSeriesData.length - 2].negeri} {m.states()} {m.compared_to_yesterday()}
+            {m.increased()} {dateSeriesData[dateSeriesData.length - 1].negeri - dateSeriesData[dateSeriesData.length - 2].negeri} {m.state()} {m.compared_to_yesterday()}
           {:else if dateSeriesData[dateSeriesData.length - 1].negeri < dateSeriesData[dateSeriesData.length - 2].negeri}
-            {m.decreased()} {dateSeriesData[dateSeriesData.length - 2].negeri - dateSeriesData[dateSeriesData.length - 1].negeri} {m.states()} {m.compared_to_yesterday()}
+            {m.decreased()} {dateSeriesData[dateSeriesData.length - 2].negeri - dateSeriesData[dateSeriesData.length - 1].negeri} {m.state()} {m.compared_to_yesterday()}
           {:else}
             {m.no_change()} {m.compared_to_yesterday()}
           {/if}
