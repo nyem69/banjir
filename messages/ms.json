@@ -2,5 +2,9 @@
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "Selamat datang, {name} dari ms!",
 	"title": "Malaysia Flood Evacuation Centers Dashboard",
-	"search": "Cari"
+	"search": "Cari",
+	"disasters": "Bencana",
+	"flood": "Banjir",
+	"weather": "Cuaca",
+	"air_quality": "Kualiti Udara"
 }

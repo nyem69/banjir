@@ -9,5 +9,11 @@ export default defineConfig({
 			outdir: "./src/lib/paraglide"
     	}),
 		sveltekit()
-	]
+	],
+
+	server: {
+		host: '0.0.0.0', // Bind to all interfaces
+		port: 5174, // Default port
+		open: true  // Automatically open in browser
+	}  	
 });

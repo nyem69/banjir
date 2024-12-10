@@ -74,7 +74,9 @@ npm run build
 
 ## 🙏 Acknowledgments
 
-- Data provided by [Jabatan Kebajikan Masyarakat Malaysia](https://www.jkm.gov.my/)
+- Data provided by 
+   - [Jabatan Kebajikan Masyarakat Malaysia](https://www.jkm.gov.my/) [Dashboard](https://infobencanajkmv2.jkm.gov.my/landing/)
+   - [Jabatan Kebajikan Masyarakat Malaysia](https://www.nadma.gov.my/) [Dashboard](https://portalbencana.nadma.gov.my/ms/)
 
 ## 📝 API Information
 
