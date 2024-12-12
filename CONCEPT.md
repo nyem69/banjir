@@ -126,22 +126,47 @@ graph LR
 
 ## 🛠️ Technical Architecture
 
-### Frontend
-- **Current**
-  - D3.js for visualizations
-  - Vanilla JavaScript for interactions
-  - Responsive CSS
+### Frontend Stack
+- **Framework**: SvelteKit with TypeScript
+- **Styling**: Tailwind CSS
+- **Visualization**: D3.js, Layerchart
+- **Internationalization**: Paraglide
+- **Deployment**: Cloudflare Pages
 
-- **Future**
-  - Framework migration (React/Vue/Svelte)
-  - PWA capabilities
-  - Offline support
+### Data Flow
+```mermaid
+graph LR
+    A[JKM API] --> B[Data Processor]
+    B --> C[Client-side Store]
+    C --> D[Visualization Layer]
+    D --> E[User Interface]
+    E --> F[User Interaction]
+    F --> C
+```
 
-### Backend (Future)
-- Data caching layer
-- Authentication system
-- API rate limiting
-- Historical data storage
+### Key Features
+1. **Real-time Data Processing**
+   - Direct API integration
+   - Efficient data transformation
+   - Client-side caching
+
+2. **Multi-language Support**
+   - Malay (Default)
+   - English
+   - Chinese
+   - Tamil
+   - Message-based translations
+   - Language detection
+
+3. **Responsive Visualization**
+   - Interactive charts
+   - Dynamic updates
+   - Mobile-first design
+
+4. **Performance Optimization**
+   - Static site generation
+   - Edge deployment
+   - Minimal dependencies
 
 ## 📱 Mobile Considerations
 

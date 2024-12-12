@@ -7,10 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"db:push": "drizzle-kit push",
-		"db:migrate": "drizzle-kit migrate",
-		"db:studio": "drizzle-kit studio"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.16.0",
@@ -37,13 +34,10 @@
 	"dependencies": {
 		"@inlang/paraglide-sveltekit": "^0.11.1",
 		"@layerstack/utils": "^0.0.7",
-		"@oslojs/crypto": "^1.0.1",
-		"@oslojs/encoding": "^1.1.0",
 		"@sveltejs/adapter-cloudflare": "^4.8.0",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
-		"argon2-browser": "^1.18.0",
 		"d3": "^7.9.0",
 		"d3-array": "^3.2.4",
 		"d3-geo": "^3.1.1",
@@ -54,7 +48,6 @@
 		"date-fns": "^4.1.0",
 		"dayjs": "^1.11.13",
 		"layerchart": "^0.59.6",
-		"mysql2": "^3.11.0",
 		"svelte-ux": "^0.76.0",
 		"topojson-client": "^3.1.0"
 	}

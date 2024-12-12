@@ -35,6 +35,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Resolved a11y linting warnings in button components
 - Updated deprecated accessibility rule names
 
+## [0.5.1] - 2024-12-12
+### Changed
+- Removed Lucia authentication
+- Removed Drizzle ORM
+- Simplified app architecture for Cloudflare deployment
+- Updated technical documentation
+
+### Fixed
+- Resolved Node.js compatibility issues for Cloudflare deployment
+- Cleaned up unused dependencies
+- Removed auth-related type declarations
+
 ## [0.5.0] - 2024-12-11
 ### Added
 - Comprehensive project documentation
@@ -138,7 +150,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Pages hosting
 - Basic API integration
 
-[Unreleased]: https://github.com/nyem69/banjir/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/nyem69/banjir/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/nyem69/banjir/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/nyem69/banjir/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/nyem69/banjir/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/nyem69/banjir/compare/v0.2.0...v0.3.0
